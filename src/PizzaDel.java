@@ -1,30 +1,7 @@
 import java.util.Scanner;
-
-class Student{
-	int mark;
-	String name;
-	public Student(int mark, String name){
-		this.mark = mark;
-		this.name = name;
-	}
-	public void addGrades() {
-		
-	}
-	public String gradeReport(){
-		if (this.mark>70) {
-			System.out.println(this.name + " achieved an A");
-			return "A";
-		} else if (this.mark>50) {
-			System.out.println(this.name + " has Passed");
-			return "Pass";			
-		} else {
-			System.out.println(this.name + " has failed");
-			return "Fail";
-		}
-	}
+class Pizza{
+	public void st
 }
-
-
 
 class PizzaApp{
 	int[] order = new int[3];
@@ -83,7 +60,9 @@ class PizzaApp{
 
 		System.out.println("Number of Pizzas");
 		for (int i = 0; i< this.order.length; i++) {
-			System.out.println(menu[i].substring(4) + ": " + order[i]);
+			if (order[i] >0) {
+				System.out.println(order[i] + " " + menu[i].substring(4));
+			}
 		}
 		System.out.println("Total Price: $"+ this.totalPrice());
 	}
@@ -98,36 +77,14 @@ class PizzaApp{
 		return sum;
 	}
 	public void checkout(){
-		System.out.println("Please pay: " + this.totalPrice());
+		System.out.println("Please pay: $" + this.totalPrice());
 		this.resetOrder();
 		this.kr = "q";
 	}
 }
 
-public class oopAss {
+public class PizzaDel {
 	public static void main(String[] args) {
-		/*
-		Scanner inp = new Scanner(System.in);
-		System.out.println("How many students?");
-		int num = inp.nextInt();
-		inp.nextLine();
-		Student[] classroom = new Student[num];
-		int age;
-		String name;
-		for( int i = 0; i<num; i++) {
-			System.out.println("Enter name followed by marks");
-			name = inp.nextLine();
-			age = inp.nextInt();
-			classroom[i] = new Student(age, name);
-			inp.nextLine(); //Flush to end
-		}
-
-		System.out.println("Printing Class Results");
-		for(Student i: classroom) {
-			i.gradeReport();
-		}
-		inp.close();
-		*/
 		PizzaApp pa = new PizzaApp();
 		pa.start();
 	}
