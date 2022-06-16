@@ -1,10 +1,13 @@
 import java.util.Arrays;
 public class testbed {
+	abstract class Test{
+		public static void stuff(){
+			System.out.println("..");
+		}
+	}
 
 	public static void main(String[] args) {
-		String records = "what is this 34going to be";
-		System.out.println(Arrays.toString(records.split("be")));
-
+		Test.stuff();
 	}
 
 }
